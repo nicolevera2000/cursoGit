@@ -43,14 +43,28 @@ const metodoPresentar =()=>{
 
 const cuandoSellena=()=>{
     if(lista_llena_productos.length==recienLlegado){
-        console.log(`La lista de productos se lleno`);
+        console.log(`Su stock tiene ${lista_llena_productos.length}`);
+
         for (let i = 0; i < lista_llena_productos.length; i++) {
-            console.log(lista_llena_productos[i]);
-            
+
+            console.log(`Producto n°${i}
+                        ${lista_llena_productos[i]["nombre producto"]}
+                        ${lista_llena_productos[i]["cuantas cajas"]}
+                        ${lista_llena_productos[i]["cuantos articulos indv"]} `);
+               
         }
     }
     
 }
+// crear la tabla
+let tabla =document.createElement('table');
+
+//crear el encabezado 
+let cabeza=document.createElement('thead');
+let encabezado=cabeza.insertRow();
+
+
+
 
 
 
