@@ -1,3 +1,41 @@
-body{
-    background-color: rgb(225, 184, 184);
+body {
+        margin: 0;
+}
+h1{
+    text-align: justify center;
+}
+
+.div_padre{
+    display: flex;
+    flex-direction: column;
+} 
+.form_{
+    text-align: center;
+    padding: 10px;
+}
+
+td, th{
+    text-align: center;
+    padding: 10px;
+    border: solid rgb(121,143,200) 1px;
+}
+
+.contenedor_tabla{
+
+    margin: 0 auto;
+}
+
+.contenedor_form{
+
+    text-align:  top center;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+.label_not{
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
+.h5{
+     margin: 0 auto;
 }

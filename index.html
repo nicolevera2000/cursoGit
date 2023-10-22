@@ -10,22 +10,36 @@
 
     <h1> Bienvenido al programa de bodega de la empresa ....</h1>
 
+    <div class="div_padre">
+    <div class="contenedor_form">
 
-    <form action="" id="form">
+        <h5 class="label_not" id="not"></h5>
+    <form action="" id="form" class="form_">
 
-        <label for="ingr_nom_pro">Ingrese producto</label>
-        <input type="text" name="ingr_nom_pro" id="nombre_productos">
+        <label for="nombre_productos">Ingrese producto</label>
+        <input type="text" name="nombre_productos" id="nombre_productos">
 
-        <label for="ingr_caj_pro">Ingrese cuantas cajas llegaron del producto</label>
-        <input type="text" name="ingr_caj_pro" id="cajas">
+        <br>
+        <br>
+        <label for="cajas">Ingrese cuantas cajas llegaron del producto</label>
+        <input type="text" name="cajas" id="cajas">
 
-        <label for="ingr_num_pro">Ingrese cuantos productos llegaron en cada caja</label>
-        <input type="text" name="ingr_num_pro" id="valor_individual">
+        <br>
+        <br>
+        <label for="valor_individual">Ingrese cuantos productos llegaron en cada caja</label>
+        <input type="text" name="valor_individual" id="valor_individual">
 
+        <br>
+        <br>
         <button type="button" id="boton">agregar</button>
         <p class="warnings" id="warnings"></p>
 
     </form>
+    </div>
+
+    <div class="contenedor_tabla">
+
+    </div>
     <script src="main.js">
 
     </script>

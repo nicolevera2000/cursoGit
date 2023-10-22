@@ -2,6 +2,7 @@ const boton = document.getElementById("boton");
 const nombre_prod=document.getElementById("nombre_productos");
 const cajas=document.getElementById("cajas");
 const ing_indv=document.getElementById("valor_individual");
+let notificacion=document.getElementById("not");
 let lista_productos;
 
 const recienLlegado=prompt("Cuantos productos va ingresar");
@@ -10,6 +11,7 @@ let lista_llena_productos=[];
 
 boton.addEventListener('click',()=>{
     if(contador_clicks<recienLlegado){
+        notificacion.textContent=`Se agrego el producto n°${contador_clicks+1}`
     lista_productos={
         "nombre producto": `${nombre_prod.value}`,
         "cuantas cajas": `${cajas.value}`,
@@ -21,6 +23,7 @@ boton.addEventListener('click',()=>{
     ing_indv.value="";
     metodoPresentar();
     cuandoSellena();
+    
     contador_clicks++;
     }
     else{
@@ -43,6 +46,8 @@ const metodoPresentar =()=>{
 
 const cuandoSellena=()=>{
     if(lista_llena_productos.length==recienLlegado){
+
+        crearTabla();
         console.log(`Su stock tiene ${lista_llena_productos.length}`);
 
         for (let i = 0; i < lista_llena_productos.length; i++) {
@@ -56,12 +61,25 @@ const cuandoSellena=()=>{
     }
     
 }
-// crear la tabla
-let tabla =document.createElement('table');
+let contenedor=document.querySelector(".contenedor_tabla")
+const crearTabla=()=>{
+    
+    
+    let tabla=
+    `<table><thead><tr><th>NOMBRE DE PRODUCTO</th><th>CAJA DE PRODUCTO</th><th>UNIDADES POR CAJA</th></tr></thead><tbody>`;
+    
+    for ( i = 0; i < lista_llena_productos.length; i++) {
+        
+        tabla += `<tr><td>${lista_llena_productos[i]["nombre producto"]}</td><td>${lista_llena_productos[i]["cuantas cajas"]}</td><td>${lista_llena_productos[i]["cuantos articulos indv"]}</td></tr>`;
+        
+    }
+    
+    tabla +=`</tbody></table>`;
+    contenedor.innerHTML=tabla
+    console.log(tabla);
+}
 
-//crear el encabezado 
-let cabeza=document.createElement('thead');
-let encabezado=cabeza.insertRow();
+
 
 
 
